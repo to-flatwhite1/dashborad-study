@@ -10,12 +10,13 @@ import IconBox from '@/components/icon/IconBox';
 import Button from '@/components/button/Button';
 import CheckTable from './components/CheckTable';
 import { tableDataCheck } from '@/data/tableDataCheck';
+import OrderCoffee from '@/app/class/page';
 
 const HomePage = () => {
     return (
         <div id="wrap" className="bg-gray-300">
-            <Header />
             {/* ministate */}
+
             <main className="inner flex flex-col gap-10">
                 <div>
                     <Button>확인</Button>
@@ -41,7 +42,6 @@ const HomePage = () => {
                     </div>
                 </div>
             </main>
-            <Footer />
         </div>
     );
 };
