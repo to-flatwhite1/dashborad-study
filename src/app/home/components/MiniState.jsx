@@ -1,8 +1,5 @@
 import Card from '@/components/card/Card';
-
 import IconBox from '@/components/icon/IconBox';
-
-import React from 'react';
 
 const MiniState = ({ name, value, startContent, endContent, growth }) => {
     return (

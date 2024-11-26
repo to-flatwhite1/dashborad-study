@@ -1,3 +1,4 @@
+'use client';
 import Card from '@/components/card/Card';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
@@ -8,6 +9,7 @@ import MiniStateGrid from './components/MiniStateGrid';
 import IconBox from '@/components/icon/IconBox';
 import Button from '@/components/button/Button';
 import CheckTable from './components/CheckTable';
+import { tableDataCheck } from '@/data/tableDataCheck';
 
 const HomePage = () => {
     return (
@@ -18,12 +20,20 @@ const HomePage = () => {
                 <div>
                     <Button>확인</Button>
                     <Button gray>취소</Button>
+                    <button
+                        onClick={(event) => {
+                            console.log('확인완료');
+                            console.log(event);
+                        }}
+                    >
+                        확인
+                    </button>
                 </div>
 
                 <MiniStateGrid />
                 <div className="flex flex-col  lg:flex-row gap-4">
                     <div className="bg-red-50 grow">
-                        <CheckTable />
+                        <CheckTable tableDataCheck={tableDataCheck} />
                     </div>
                     <div className=" grow flex flex-col md:flex-row gap-4">
                         <div className="bg-green-100 grow ">g</div>
